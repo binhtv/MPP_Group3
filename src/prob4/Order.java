@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Order {
+final public class Order {
 	private LocalDate orderDate;
 	private List<Item> items;
 	
@@ -14,15 +14,18 @@ public class Order {
 		this.orderDate = orderDate;
 		items = new ArrayList<Item>();	
 	}
+	
 	public static Order newOrder(Customer cust, LocalDate date) {
 		if(cust == null) throw new NullPointerException("Null customer");
 		Order ord = new Order(date);
 		cust.addOrder(ord);
 		return ord;
 	}
+	
 	public void addItem(String name){
 		items.add(new Item(name));
 	}
+	
 	@Override
 	public String toString() {
 		return orderDate + ": " + 
