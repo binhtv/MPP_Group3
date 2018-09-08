@@ -1,6 +1,6 @@
 package prob2;
 
-public final class Circle extends Shape {
+public final class Circle implements Figure {
 	private double radius;
 	
 	public double getRadius() {
