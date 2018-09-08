@@ -1,6 +1,6 @@
 package prob2;
 
-public final class Triangle extends Shape {
+public final class Triangle implements Figure {
 	private double height;
 	private double base;
 	

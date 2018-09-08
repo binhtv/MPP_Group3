@@ -1,6 +1,6 @@
 package prob2;
 
-public final class Rectangle extends Shape {
+public final class Rectangle implements Figure{
 	private double width;
 	private double height;
 	
