@@ -10,6 +10,6 @@ public class MallardDuck extends Duck{
 		quackBehavior = new Quack();
 	}
 	public void display() {
-		System.out.println("   display");
+		System.out.println("    display");
 	}
 }
