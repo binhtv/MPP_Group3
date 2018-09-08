@@ -3,7 +3,7 @@ package prob4;
 final public class Item {
 	String name;
 	
-	public Item(String name) {
+	Item(String name) {
 		this.name = name;
 	}
 	

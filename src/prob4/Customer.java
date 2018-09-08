@@ -7,7 +7,7 @@ final public class Customer {
 	private String name;
 	private List<Order> orders;
 	
-	public Customer(String name) {
+	Customer(String name) {
 		this.name = name;
 		orders = new ArrayList<Order>();	
 	}
