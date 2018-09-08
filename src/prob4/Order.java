@@ -10,7 +10,7 @@ final public class Order {
 	private List<Item> items;
 	
 	//use a factory method
-	Order(LocalDate orderDate) {
+	private Order(LocalDate orderDate) {
 		this.orderDate = orderDate;
 		items = new ArrayList<Item>();	
 	}
