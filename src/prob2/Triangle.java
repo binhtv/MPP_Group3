@@ -16,7 +16,7 @@ public final class Triangle implements Figure {
 		this.height = height;
 		this.base = base;
 	}
-	
+
 	public double computeArea() {
 		return base * height / 2.0;
 	}

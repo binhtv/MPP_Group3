@@ -6,12 +6,12 @@ import java.util.List;
 final public class Customer {
 	private String name;
 	private List<Order> orders;
-	
+
 	Customer(String name) {
 		this.name = name;
-		orders = new ArrayList<Order>();	
+		orders = new ArrayList<Order>();
 	}
-	
+
 	public void addOrder(Order order) {
 		orders.add(order);
 	}
