@@ -1,0 +1,2 @@
+Problem: The equals method in Employee class does not have the same signature with Object. In this case, equals methods in Object will be used
+Solution: Override the equals method in Object in Employee class by modifying Employee parameter to Object

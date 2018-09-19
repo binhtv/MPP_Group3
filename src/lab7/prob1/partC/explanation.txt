@@ -1,0 +1,2 @@
+Problem: EmployeeInfo.removeDuplicates try to use HashMap to track the duplication. The key of HashMap is Employee instance with overridden equals but not overridden hashCode
+Solution: Also override the hashCode method in Employee class

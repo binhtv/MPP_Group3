@@ -1,0 +1,2 @@
+Problem: Employee instance is mutable by having a setter method for its attributes. And in EmployeeInfo class has "tracker.get(e).setVisited(true);" to modify the instance of Employee that is using as a key
+Solution: Remove this line of code "tracker.get(e).setVisited(true);"
