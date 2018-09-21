@@ -5,6 +5,11 @@ import java.util.List;
 
 import lab8.day1.prob2.Product;
 
+/**
+ * 
+ * @author binhtran
+ *
+ */
 public class Main {
 	public static void main(String... args) {
 		List<Product> products = new ArrayList<>();
@@ -24,7 +29,7 @@ public class Main {
 		System.out.println(products);
 
 		pi.sort(products, ProductInfoWithLambda.SortMethod.BYTITLE);
-		System.err.println("After sorting by title");
+		System.err.println("After sorting by title then model");
 		System.out.println(products);
 	}
 }

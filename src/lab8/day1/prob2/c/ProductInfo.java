@@ -16,9 +16,9 @@ public class ProductInfo {
 
 			@Override
 			public int compare(Product p1, Product p2) {
-				if(method == SortMethod.BYPRICE) {
+				if (method == SortMethod.BYPRICE) {
 					return Double.compare(p1.getPrice(), p2.getPrice());
-				} else if(method == SortMethod.BYTITLE){
+				} else if (method == SortMethod.BYTITLE) {
 					return p1.getTitle().compareToIgnoreCase(p2.getTitle());
 				} else {
 					throw new IllegalArgumentException("Cannot compare");

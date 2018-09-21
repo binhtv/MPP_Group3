@@ -13,6 +13,6 @@ public class Main {
 			return list;
 		};
 
-		System.out.println(bf.apply(7.0, 8.5));
+		System.out.println(bf.apply(2.0, 3.0));
 	}
 }
