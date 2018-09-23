@@ -3,6 +3,8 @@ package lab9.problem10;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.function.BiFunction;
+import java.util.function.Function;
 import java.util.stream.Stream;
 
 class Human {
@@ -68,14 +70,17 @@ public class ConstructorReference {
 		// Method Reference ClassName::new. Then print the object status
 		System.out.println("Fourth type of  Method Reference usage: ");
 		System.out.println("---Contructor 1: ");
-		StringBuilder bd = Stream.of(list).collect(StringBuilder::new, StringBuilder::append, StringBuilder::append);
-		System.out.println(bd);
+		Function<String, Human> func1 = Human::new;
+		Human human1 = func1.apply("Binh Tran");
+		System.out.println(human1);
 		System.out.println("---Contructor 2: ");
-		List<?> listHuman = Stream.of(list).collect(ArrayList::new, ArrayList::add, ArrayList::add);
-		System.out.println(listHuman);
-		System.out.println("---Contructor 3 sum all ages: ");
-		System.out.println(Stream.of(list).map(Human::getAge).mapToInt(Integer::new).sum());
-
+		BiFunction<String, Integer, Human> func2 = Human::new;
+		Human human2 = func2.apply("Binh Tran", 29);
+		System.out.println(human2);
+		System.out.println("---Contructor 3: ");
+		TriFunction<String, Integer, String, Human> trFunc = Human::new;
+		Human human3 = trFunc.apply("Binh Tran", 29, "Male"); 
+		System.out.println(human3);
 		// Query 3 : Count the male candidates whose age is more than 30
 		System.out.println("Count the male candidates whose age is more than 30: ");
 		System.out.println(
