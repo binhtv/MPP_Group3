@@ -65,6 +65,7 @@ public class ConstructorReference {
 		// Query 2 : Create an object by choosing suitable Interface to the
 		// specified constructors(Totally 3 constructors) using fourth type of
 		// Method Reference ClassName::new. Then print the object status
+		System.out.println();
 		System.out.println("Fourth type of  Method Reference usage: ");
 		System.out.println("---Contructor 1: ");
 		Function<String, Human> func1 = Human::new;
@@ -78,6 +79,7 @@ public class ConstructorReference {
 		TriFunction<String, Integer, String, Human> trFunc = Human::new;
 		Human human3 = trFunc.apply("Binh Tran", 29, "Male"); 
 		System.out.println(human3);
+		System.out.println();
 		// Query 3 : Count the male candidates whose age is more than 30
 		System.out.println("Count the male candidates whose age is more than 30: ");
 		System.out.println(

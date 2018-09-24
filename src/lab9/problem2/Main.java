@@ -6,7 +6,8 @@ import java.util.stream.Stream;
 
 public class Main {
 	public static void main(String... strings) {
-		IntSummaryStatistics iss = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9).collect(Collectors.summarizingInt(Integer::valueOf));
+		Stream<Integer> myIntStream = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9);
+		IntSummaryStatistics iss = myIntStream.collect(Collectors.summarizingInt(Integer::valueOf));
 		System.out.println("Maximum value: " + iss.getMax());
 		System.out.println("Minimum value: " + iss.getMin());
 	}

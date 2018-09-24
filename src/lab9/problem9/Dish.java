@@ -98,15 +98,15 @@ public class Dish {
 	 * @return
 	 */
 	public static int calculateTotalCaloriesMethodReference() {
-		return menu.stream().map(d -> d.getCalories()).reduce(0, Integer::sum);
+		return menu.stream().map(Dish::getCalories).reduce(0, Integer::sum);
 	}
 
 	public static void main(String[] args) {
-		System.out.println("Is there any Vegetarian meal available: " + Dish.isAnyVegeterianMealAvailable());
+		System.out.println("Is there any Vegetarian meal available: " + (Dish.isAnyVegeterianMealAvailable() ? "YES" : "NO"));
 		System.out.println(
-				"Is there any healthy menu have calories less than 1000: " + Dish.isAnyHavingCalorieLessThan1000());
+				"Is there any healthy menu have calories less than 1000: " + (Dish.isAnyHavingCalorieLessThan1000() ? "YES" : "NO"));
 		System.out.println("Is there any unhealthy menu have calories greater than 1000: "
-				+ Dish.isAnyHavingColoriesMoreThan1000());
+				+ (Dish.isAnyHavingColoriesMoreThan1000() ? "YES" : "NO"));
 		System.out.println("Find and return the first item for the type of MEAT: "
 				+ (Dish.firstDishWithMeat().isPresent() ? Dish.firstDishWithMeat().get() : "No"));
 		System.out.println("Total Calories using reduce: " + Dish.calculateTotalCalories());

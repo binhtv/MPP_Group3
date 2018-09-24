@@ -19,6 +19,5 @@ public class Main {
 		System.out.println("Best solution: ");
 		System.out.println("Number of the words that contains T, not B and length = 9: " + Best.funcCountWords.count(words, 'T', 'B', 9));
 		System.out.println("Number of the words that contains T, not e and length = 9: " + Best.funcCountWords.count(words, 'T', 'e', 9));
-		
 	}
 }

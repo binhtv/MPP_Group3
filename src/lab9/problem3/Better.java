@@ -12,7 +12,7 @@ import java.util.function.Predicate;
  */
 public class Better {
 	final BiFunction<Character, Character, Function<Integer, Predicate<String>>> funcCountWords = (c,
-			d) -> len -> word -> (word.contains(c.toString()) && !word.contains(d.toString()) && word.length() == len);
+			d) -> len -> word -> (word.contains(String.valueOf(c)) && !word.contains(String.valueOf(d)) && word.length() == len);
 
 	public int countWords(List<String> words, char c, char d, int len) {
 		return (int) words.stream()
