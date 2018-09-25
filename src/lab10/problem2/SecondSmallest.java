@@ -24,7 +24,7 @@ public class SecondSmallest {
 	}
 
 	public static void main(String... strings) {
-		List<Integer> ints = Arrays.asList(1, 2, 5, 9, 3, 4, 7, 6);
+		List<Integer> ints = Arrays.asList(1, 1, 2, 5, 9, 3, 4, 7, 6);
 		List<LocalDate> dates = Arrays.asList(LocalDate.of(2018, 9, 12), LocalDate.of(2018, 10, 13),
 				LocalDate.of(2018, 8, 15));
 		List<Double> doubles = Arrays.asList(5.0, 9.5, 3.5, 78.3, 100.1);
@@ -32,17 +32,17 @@ public class SecondSmallest {
 		System.out.println("List of intergers: ");
 		System.out.println(ints);
 		System.out.println("Second smallest: " + secondSmallest(ints));
-		
+
 		System.out.println();
 		System.out.println("List of LocalDate: ");
 		System.out.println(dates);
 		System.out.println("Second smallest: " + secondSmallest(dates));
-		
+
 		System.out.println();
 		System.out.println("List of Double: ");
 		System.out.println(doubles);
 		System.out.println("Second smallest: " + secondSmallest(doubles));
-		
+
 		System.out.println();
 		System.out.println("List of Long: ");
 		System.out.println(longs);

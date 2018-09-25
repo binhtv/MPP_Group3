@@ -15,5 +15,9 @@ public class GroupUtil {
 		Group<Integer> group = new Group<>(0, list);
 		System.out.println(group);
 		System.out.println(GroupUtil.copy(group));
+		List<String> listStrings = Arrays.asList("C++","C#", "Java","Kotlin");
+		Group<String> language = new Group<String>("Java", listStrings);
+		System.out.println(language);
+		System.out.println(GroupUtil.copy(language));
 	}
 }
